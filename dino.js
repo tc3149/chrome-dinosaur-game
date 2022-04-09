@@ -15,6 +15,7 @@ let dinoFrame;
 let currentFrameTime;
 let yVelocity;
 export function setupDino() {
+  setCustomProperty(dinoElem, "--bottom", 0);
   isJumping = false;
   dinoFrame = 0;
   currentFrameTime = 0;
