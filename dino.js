@@ -36,6 +36,13 @@ export function setDinoLose() {
   dinoElem.src = "imgs/dino-lose.png";
 }
 
+function onJump(e) {
+  if (e.code !== "Space" || isJumping) return;
+
+  yVelocity = JUMP_SPEED;
+  isJumping = true;
+}
+
 function handleRun(delta, speedScale) {
   if (isJumping) {
     dinoElem.src = `imgs/dino-stationary.png`;
@@ -60,11 +67,4 @@ function handleJump(delta) {
   }
 
   yVelocity -= GRAVITY * delta;
-}
-
-function onJump(e) {
-  if (e.code !== "Space" || isJumping) return;
-
-  yVelocity = JUMP_SPEED;
-  isJumping = true;
 }
