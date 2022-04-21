@@ -24,8 +24,8 @@ export function setupDino() {
 }
 
 export function updateDino(delta, speedScale) {
-  handleRun(delta, speedScale);
   handleJump(delta);
+  handleRun(delta, speedScale);
 }
 
 export function getDinoRect() {
