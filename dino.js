@@ -10,6 +10,7 @@ const GRAVITY = 0.0018;
 const DINO_FRAME_COUNT = 2;
 const FRAME_TIME = 100;
 
+let isDino;
 let isJumping;
 let dinoFrame;
 let currentFrameTime;
